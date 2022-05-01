@@ -82,15 +82,13 @@ function updatePerspective() {
    	perspectiveY = vcam._y + vcam._yscale / 2;
 }
 
-var bold = 1;
-var someX = -400;
-var someY = -485;
 onEnterFrame = function()
 {
    updatePerspective();
-   _root.createEmptyMovieClip("fill", _root.getDepth() - 2);
-   _root.createEmptyMovieClip("box",_root.getDepth() - 1);
-   _root.box.lineStyle(bold,0,100,true,"normal","square","miter",1);
+   
+   //Example of Drawing Object creation:
+   _root.createEmptyMovieClip("lines", _root.getDepth() - 1);
+   _root.lines.lineStyle(1, 0x000000, 100, true, "normal", "square", "miter", 1);
    
    // Draw down here
    
